@@ -4,31 +4,96 @@
 <title>Games List</title>
 <link rel="stylesheet" href="./css/style.css">
 <style>
-/* Basic style for buttons to make them look like the original links */
-.game-button {
-  display: block; /* Makes each button take up its own line */
-  width: 100%;
-  padding: 8px 0;
-  margin: 2px 0;
-  text-align: left;
-  border: none;
-  background: none;
-  color: #333; /* Use a color similar to a default link */
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none; /* In case you want to style them like links */
+/* --- Neumorphic Styling --- */
+body {
+    background-color: #e0e0e0; /* Light background is essential for Neumorphism */
+    padding: 50px;
+    font-family: Arial, sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+}
+
+.box {
+    width: 350px;
+    padding: 25px;
+    border-radius: 25px;
+    background: #e0e0e0;
+    /* The main Neumorphic effect: inner shadow */
+    box-shadow: 10px 10px 20px #bebebe, 
+                -10px -10px 20px #ffffff;
+}
+
+h2 {
+    color: #4f4f4f;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c8c8c8; /* Subtle separator */
+}
+
+/* Search Bar Input Neumorphic Styling (Inset look) */
+#gsearchbar {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #e0e0e0;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    /* The inset shadow for the pressed/recessed look */
+    box-shadow: inset 5px 5px 10px #bebebe, 
+                inset -5px -5px 10px #ffffff;
+}
+
+/* Button Neumorphic Styling (Concave look) */
+.game-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    text-align: left;
+    border: none;
+    border-radius: 10px;
+    background: #e0e0e0;
+    color: #4f4f4f;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* The default slightly raised look */
+    box-shadow: 3px 3px 6px #bebebe, 
+                -3px -3px 6px #ffffff;
+}
+
+/* Button Neumorphic Hover and Active (Pressed/Recessed look) */
 .game-button:hover {
-  text-decoration: underline;
-  background-color: #f0f0f0;
+    box-shadow: 2px 2px 4px #bebebe, 
+                -2px -2px 4px #ffffff;
+}
+
+.game-button:active {
+    /* Inset shadow for the pressed effect */
+    box-shadow: inset 3px 3px 6px #bebebe, 
+                inset -3px -3px 6px #ffffff;
+}
+
+/* Ensure hidden buttons don't affect layout (Crucial for Neumorphism) */
+.game-button[style*="display: none"] {
+    margin: 0;
+    padding: 0;
 }
 </style>
 </head>
 <body>
 <div class="container">
 <div class="box">
-<input type="text" id="gsearchbar" onkeyup="document.querySelectorAll('#glist>button').forEach(l=>l.style.display=l.textContent.toUpperCase().includes(this.value.toUpperCase().replace(/ /g,''))?'block':'none')" autocomplete="off" spellcheck="false" placeholder="Search" />
+<input type="text" id="gsearchbar" onkeyup="document.querySelectorAll('#glist > button').forEach(l=>l.style.display=l.textContent.toUpperCase().includes(this.value.toUpperCase().replace(/ /g,''))?'block':'none')" autocomplete="off" spellcheck="false" placeholder="Search" />
 <div id="glist">
 <h2>Games List</h2>
 <button class="game-button" onclick="window.location.href='./gfiles/games/1v1lol/'">1v1lol</button>
@@ -174,23 +239,11 @@
 <button class="game-button" onclick="window.location.href='./gfiles/games/webecomewhatwebehold/'">webecomewhatwebehold</button>
 <button class="game-button" onclick="window.location.href='./gfiles/games/worldshardestgame2/'">worldshardestgame2</button>
 
-<h2>Gameboy Advance</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=mgba'">Upload ROM</button>
-<h2>Genesis / Master System</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=genesis_plus_gx'">Upload ROM</button>
-<h2>Nintendo 64</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=mupen64plus_next'">Upload ROM</button>
-<h2>NES</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=nestopia'">Upload ROM</button>
-<h2>Super Nintendo</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=snes9x'">Upload ROM</button>
-<h2>Flash Games</h2>
-<button class="game-button" onclick="window.location.href='./gfiles/flash/'">Upload SWF</button>
 </div>
 </div>
 </div>
 <script>
-// The updated JavaScript to handle search filtering for the new list of buttons
+// The JavaScript to handle search filtering
 document.getElementById("gsearchbar").onkeyup = function() {
     let searchValue = this.value.toUpperCase().replace(/ /g,'');
     document.querySelectorAll('#glist > button').forEach(button => {
@@ -202,7 +255,7 @@ document.getElementById("gsearchbar").onkeyup = function() {
         }
     });
 
-    // Optional: Logic to show/hide section headings (H2) based on visible buttons
+    // Logic to show/hide section headings (H2) based on visible buttons
     document.querySelectorAll('#glist > h2').forEach(heading => {
         let nextSibling = heading.nextElementSibling;
         let showHeading = false;
@@ -214,10 +267,10 @@ document.getElementById("gsearchbar").onkeyup = function() {
             }
             nextSibling = nextSibling.nextElementSibling;
         }
-        // Only hide the heading if no buttons in its section are visible.
-        // For the "Games List" H2, it should probably always be visible.
+        
+        // Always show the main "Games List" header if it exists.
         if (heading.textContent.trim() === 'Games List') {
-             heading.style.display = 'block'; // Always show the main game list header
+             heading.style.display = 'block'; 
         } else {
              heading.style.display = showHeading ? 'block' : 'none';
         }
