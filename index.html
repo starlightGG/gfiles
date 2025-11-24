@@ -1,43 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starlight GG Games Hub</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for Inter font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+<title>Games List</title>
+<link rel="stylesheet" href="./css/style.css">
+<style>
+/* Basic style for buttons to make them look like the original links */
+.game-button {
+  display: block; /* Makes each button take up its own line */
+  width: 100%;
+  padding: 8px 0;
+  margin: 2px 0;
+  text-align: left;
+  border: none;
+  background: none;
+  color: #333; /* Use a color similar to a default link */
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none; /* In case you want to style them like links */
+}
+
+.game-button:hover {
+  text-decoration: underline;
+  background-color: #f0f0f0;
+}
+</style>
 </head>
-<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+<body>
+<div class="container">
+<div class="box">
+<input type="text" id="gsearchbar" onkeyup="document.querySelectorAll('#glist>button').forEach(l=>l.style.display=l.textContent.toUpperCase().includes(this.value.toUpperCase().replace(/ /g,''))?'block':'none')" autocomplete="off" spellcheck="false" placeholder="Search" />
+<div id="glist">
+<h2>Games List</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/games/1v1lol/'">1v1lol</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/2048/'">2048</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/adarkroom/'">adarkroom</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/asciispace/'">asciispace</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/assessmentexamination/'">assessmentexamination</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/asteroids/'">asteroids</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/astray/'">astray</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/backcountry/'">backcountry</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/baldisbasics/'">baldisbasics</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/basketballlegends/'">basketballlegends</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/basketballstars/'">basketballstars</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/basketbrosio/'">basketbrosio</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/basketrandom/'">basketrandom</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/bitlife/'">bitlife</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/blackholesquare/'">blackholesquare</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/bounceback/'">bounceback</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/boxingrandom/'">boxingrandom</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/breaklock/'">breaklock</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/breakout/'">breakout</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/btd4/'">btd4</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/captaincallisto/'">captaincallisto</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/chess/'">chess</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/chromaincident/'">chromaincident</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/chromedino/'">chromedino</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/clickerheroes/'">clickerheroes</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/clusterrush/'">clusterrush</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/connect3/'">connect3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cookieclicker/'">cookieclicker</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/crossyroad/'">crossyroad</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/csgoclicker/'">csgoclicker</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cubefield/'">cubefield</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cubitomayhem/'">cubitomayhem</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cuttherope/'">cuttherope</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cuttheropeholiday/'">cuttheropeholiday</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/cuttheropetimetravel/'">cuttheropetimetravel</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/deathrun3d/'">deathrun3d</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/deepestsword/'">deepestsword</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/doodlejump/'">doodlejump</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/doom/'">doom</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/drawthehill/'">drawthehill</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/drift/'">drift</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/drifthunters/'">drifthunters</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/drivemad/'">drivemad</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ducklife/'">ducklife</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ducklife2/'">ducklife2</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ducklife3/'">ducklife3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ducklife4/'">ducklife4</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ducklife5/'">ducklife5</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/earntodie/'">earntodie</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/edgenotfound/'">edgenotfound</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/eggycar/'">eggycar</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/evilglitch/'">evilglitch</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/factoryballsforever/'">factoryballsforever</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/fireboyandwatergirlforesttemple/'">fireboyandwatergirlforesttemple</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/flappy2048/'">flappy2048</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/flappybird/'">flappybird</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/flappyplane/'">flappyplane</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/flightsimulator/'">flightsimulator</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/fridaynightfunkin/'">fridaynightfunkin</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/friendlyfire/'">friendlyfire</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/fruitninja/'">fruitninja</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/geometrydash/'">geometrydash</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/getawayshootoutnew/'">getawayshootoutnew</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/gladihoppers/'">gladihoppers</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/googlesnake/'">googlesnake</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/gopherkart/'">gopherkart</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/grindcraft/'">grindcraft</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/hexgl/'">hexgl</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/hextris/'">hextris</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/highwaytraffic/'">highwaytraffic</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/konnekt/'">konnekt</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/learntofly/'">learntofly</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/letssurf/'">letssurf</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/littlealchemy/'">littlealchemy</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/mergeroundracers/'">mergeroundracers</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/monkeymart/'">monkeymart</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/motoroadrash3d/'">motoroadrash3d</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/motox3m/'">motox3m</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ninjavsevilcorp/'">ninjavsevilcorp</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/omnombounce/'">omnombounce</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ovo/'">ovo</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ovo2/'">ovo2</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/packabunchas/'">packabunchas</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/pacman/'">pacman</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/paperio/'">paperio</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/particleclicker/'">particleclicker</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/pushback/'">pushback</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/q1k3/'">q1k3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/r3/'">r3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/racer/'">racer</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/radiusraid/'">radiusraid</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/redball4/'">redball4</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/retrobowl/'">retrobowl</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/retrohaunt/'">retrohaunt</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/riddleschool2/'">riddleschool2</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/ritz/'">ritz</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/roadblocks/'">roadblocks</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/rooftopsnipers/'">rooftopsnipers</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/run3/'">run3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/scrapmetal3/'">scrapmetal3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/shuttledeck/'">shuttledeck</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/sketchbook04/'">sketchbook04</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/sleepingbeauty/'">sleepingbeauty</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/slope/'">slope</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/slope2/'">slope2</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/snake/'">snake</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/snowbattle/'">snowbattle</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/soccerrandom/'">soccerrandom</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/solitaire/'">solitaire</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/spacecompany/'">spacecompany</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/spacegarden/'">spacegarden</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/spacehuggers/'">spacehuggers</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/spaceinvaders/'">spaceinvaders</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stack/'">stack</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stackball/'">stackball</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickman-hook/'">stickman-hook</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickmanboost/'">stickmanboost</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickmanclimb/'">stickmanclimb</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickmangolf/'">stickmangolf</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickmanhook/'">stickmanhook</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/stickmansurvival/'">stickmansurvival</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/subwaysurfers/'">subwaysurfers</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/subwaysurfersny/'">subwaysurfersny</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/subwaysurferssingapore/'">subwaysurferssingapore</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/tanukisunset/'">tanukisunset</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/tetris/'">tetris</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/themazeofspacegoblins/'">themazeofspacegoblins</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/timeshooter/'">timeshooter</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/timeshooter2/'">timeshooter2</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/timeshooter3/'">timeshooter3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/tinyfishing/'">tinyfishing</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/tombofthemask/'">tombofthemask</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/topspeedracing3d/'">topspeedracing3d</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/towermaster/'">towermaster</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/trimps/'">trimps</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/tunnelrush/'">tunnelrush</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/vex3/'">vex3</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/vex4/'">vex4</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/vex5/'">vex5</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/vex6/'">vex6</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/webecomewhatwebehold/'">webecomewhatwebehold</button>
+<button class="game-button" onclick="window.location.href='./gfiles/games/worldshardestgame2/'">worldshardestgame2</button>
 
-    <!-- Main Container -->
-    <div class="text-center bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl max-w-lg w-full transform hover:scale-[1.02] transition duration-300">
-        <!-- Main Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-4 tracking-tight">
-            Welcome to Games Hub
-        </h1>
-        
-        <!-- Subtitle/Brand Message -->
-        <p class="text-lg sm:text-xl text-gray-300 font-medium">
-            from 
-            <span class="font-bold text-white tracking-wider text-xl sm:text-2xl">Starlight GG!</span>
-        </p>
+<h2>Gameboy Advance</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=mgba'">Upload ROM</button>
+<h2>Genesis / Master System</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=genesis_plus_gx'">Upload ROM</button>
+<h2>Nintendo 64</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=mupen64plus_next'">Upload ROM</button>
+<h2>NES</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=nestopia'">Upload ROM</button>
+<h2>Super Nintendo</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/rarch/?core=snes9x'">Upload ROM</button>
+<h2>Flash Games</h2>
+<button class="game-button" onclick="window.location.href='./gfiles/flash/'">Upload SWF</button>
+</div>
+</div>
+</div>
+<script>
+// The updated JavaScript to handle search filtering for the new list of buttons
+document.getElementById("gsearchbar").onkeyup = function() {
+    let searchValue = this.value.toUpperCase().replace(/ /g,'');
+    document.querySelectorAll('#glist > button').forEach(button => {
+        // Search filter logic for buttons
+        if (button.textContent.toUpperCase().includes(searchValue)) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    });
 
-        <!-- Button to open the games website in a new tab -->
-        <div class="mt-8">
-            <button 
-                onclick="window.open('https://starlightgg.github.io', '_blank')" 
-                class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-                Explore Games
-            </button>
-        </div>
-    </div>
-
+    // Optional: Logic to show/hide section headings (H2) based on visible buttons
+    document.querySelectorAll('#glist > h2').forEach(heading => {
+        let nextSibling = heading.nextElementSibling;
+        let showHeading = false;
+        // Check subsequent siblings until the next H2 or end of list
+        while (nextSibling && nextSibling.tagName.toLowerCase() === 'button') {
+            if (nextSibling.style.display !== 'none') {
+                showHeading = true;
+                break;
+            }
+            nextSibling = nextSibling.nextElementSibling;
+        }
+        // Only hide the heading if no buttons in its section are visible.
+        // For the "Games List" H2, it should probably always be visible.
+        if (heading.textContent.trim() === 'Games List') {
+             heading.style.display = 'block'; // Always show the main game list header
+        } else {
+             heading.style.display = showHeading ? 'block' : 'none';
+        }
+    });
+};
+</script>
 </body>
 </html>
